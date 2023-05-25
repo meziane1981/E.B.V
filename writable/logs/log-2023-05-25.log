@@ -1,0 +1,23 @@
+CRITICAL - 2023-05-25 15:18:59 --> Call to undefined method CodeIgniter\HTTP\IncomingRequest::getMethode()
+in APPPATH/Controllers/Home.php on line 18.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->register()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/basket2/public/index.php')
+CRITICAL - 2023-05-25 15:30:02 --> Undefined variable $username
+in APPPATH/Controllers/Home.php on line 26.
+ 1 APPPATH/Controllers/Home.php(26): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->register()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/basket2/public/index.php')
+CRITICAL - 2023-05-25 15:33:15 --> Undefined variable $username
+in APPPATH/Controllers/Home.php on line 26.
+ 1 APPPATH/Controllers/Home.php(26): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->register()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/basket2/public/index.php')

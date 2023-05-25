@@ -32,6 +32,7 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 
 $routes->get('/register', 'Home::register');
+$routes->post('/register', 'Home::register');
 $routes->get('/login', 'Home::login');
 
 /*

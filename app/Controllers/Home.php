@@ -12,9 +12,38 @@ class Home extends BaseController
     }
 
     public function register()
+
     {
-         return view('register');
-       
+     //get 
+     if ($this->request->getMethod()=="get") 
+     {
+
+          echo view('register');
+     }
+     else if($this->request->getMethod()=="post")
+     {
+             if($this->validate([
+               "username"=>"required",
+               "email"=>"required|valid_email",
+               "password"=>"required",
+             ]))
+             {
+                    // envoyé le formulaire
+               $username=$this->request->getVar("username");
+               $email=$this->request->getVar("email");
+               $password=$this->request->getVar("password");
+               //    $cpassword->$this->request->getVar("cpassword");
+                          echo "username: $username";
+
+             }
+             else{
+               return redirect()->back()->withInput();
+
+             }
+           
+
+
+     }
         
     }
     public function login()
