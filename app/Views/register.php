@@ -11,22 +11,23 @@
                     <form action="<?= base_url('register') ?>" method="post">
                         <div class="mb-2">
                             <label for="username">Pseudo</label>
-                            <input type="text" class="form-control" name="username">
-                            <?= $validation->getEro?>
+                            <input type="text" class="form-control" name="username" value="<?=old("username") ?>">
+                            <div class="text-danger"><?= $validation->getError("username")?></div> 
                         </div>
                         <div class="mb-2">
                             <label for="email">Émail</label>
-                            <input type="email" class="form-control" name="email">
-                             
+                            <input type="email" class="form-control" name="email" value="<?=old("email") ?>">
+                            <div class="text-danger"><?= $validation->getError("email")?></div>
                         </div>
                         <div class="mb-2">
                             <label for="password">Mot de Passe</label>
-                            <input type="password" class="form-control" name="password">
+                            <input type="password" class="form-control" name="password" value="<?=old("password") ?>">
+                            <div class="text-danger"><?= $validation->getError("password")?></div>
                         </div>
                         <div class="mb-2">
                             <label for="cpassword">CConfirme le Mot de Passe</label>
-                            
-                            <input type="password" class="form-control" name="cpassword">
+                            <input type="password" class="form-control" name="cpassword" value="<?=old("cpassword") ?>">
+                            <div class="text-danger"><?= $validation->getError("cpassword")?></div>
                         </div>
                         <div class="mb-2 text-center">
                         <input type="submit" name ="register" value="Register" class="btn btn-primary">

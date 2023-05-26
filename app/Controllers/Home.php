@@ -25,9 +25,9 @@ class Home extends BaseController
              if($this->validate([
                "username"=>"required",
                "email"=>"required|valid_email",
-               "password"=>"required",
-             ]))
-             {
+               "password"=>"required|min_length[5]|max_length[20]",
+               "cpassword"=>"matches[password]",
+              ])) {
                     // envoyé le formulaire
                $username=$this->request->getVar("username");
                $email=$this->request->getVar("email");
