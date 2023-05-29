@@ -149,7 +149,97 @@ class Home extends BaseController
 
     public function login()
     {
-        return view('login');
+        $session = session();
+        if ($this->request->getMethod()=="get") {
+            return view('login');
+        }
+        else if ($this->request->getMethod()== "post"){
+            $validation = \Config\Services::validation();
+               // validation
+               if ($this->validate([
+                 
+                "email" => "required|valid_email",
+                "password" => "required"         
+               ]))
+               {
+
+               }
+               else
+               {
+                   return redirect()->back()->withInput()->with('validation', $validation);
+               }
+        }
+        
     }
-}
+                                                                                    //     public function login()
+                                                                                    // {
+                                                                                    //     $session = session();
+
+                                                                                    //     if ($this->request->getMethod() == 'get') {
+                                                                                    //         return view('login');
+                                                                                    //     } elseif ($this->request->getMethod() == 'post') {
+                                                                                    //         $validation = \Config\Services::validation();
+
+                                                                                    //         if ($validation->run($this->request->getPost(), 'login')) {
+                                                                                    //             // Les données de validation sont valides
+                                                                                    //             $email = $this->request->getPost('email');
+                                                                                    //             $password = $this->request->getPost('password');
+
+                                                                                    //             // Effectuer l'authentification en vérifiant les informations de connexion
+                                                                                    //             // Exemple : vérification de la correspondance dans la base de données
+                                                                                    //             $userModel = new UserModel();
+                                                                                    //             $user = $userModel->where('email', $email)->first();
+
+                                                                                    //             if ($user && password_verify($password, $user['password'])) {
+                                                                                    //                 // Authentification réussie, enregistrer les informations utilisateur dans la session
+                                                                                    //                 $session->set([
+                                                                                    //                     'user_id' => $user['id'],
+                                                                                    //                     'username' => $user['username'],
+                                                                                    //                     // Autres informations utilisateur que vous souhaitez enregistrer
+                                                                                    //                 ]);
+
+                                                                                    //                 // Redirection vers le tableau de bord ou une autre page appropriée
+                                                                                    //                 return redirect()->to('/dashboard');
+                                                                                    //             } else {
+                                                                                    //                 // Identifiants de connexion incorrects
+                                                                                    //                 $session->setFlashdata('error_message', 'Identifiants de connexion incorrects.');
+                                                                                    //                 return redirect()->back()->withInput();
+                                                                                    //             }
+                                                                                    //         } else {
+                                                                                    //             // Les données de validation sont invalides
+                                                                                    //             return redirect()->back()->withInput()->with('validation', $validation);
+                                                                                    //         }
+                                                                                    //     }
+                                                                                    // }
+
+
+
+                                                                                                                //                       public function login()
+                                                                                                                // {
+                                                                                                                //     $session = session();
+                                                                                                                    
+                                                                                                                //     if ($this->request->getMethod() == "get") {
+                                                                                                                //         return view('login');
+                                                                                                                //     } elseif ($this->request->getMethod() == "post") {
+                                                                                                                //         $validation = \Config\Services::validation();
+
+                                                                                                                //         // Validation
+                                                                                                                //         if ($this->validate([
+                                                                                                                //             'email' => 'required|valid_email',
+                                                                                                                //             'password' => 'required',
+                                                                                                                //         ])) {
+                                                                                                                //             // Les règles de validation ont été respectées
+                                                                                                                //             // Effectuez ici les actions nécessaires pour la connexion de l'utilisateur
+                                                                                                                            
+                                                                                                                //             return redirect()->to('dashboard'); // Remplacez 'dashboard' par l'URL de la page de tableau de bord après la connexion
+                                                                                                                //         } else {
+                                                                                                                //             // Les règles de validation n'ont pas été respectées
+                                                                                                                //             return redirect()->back()->withInput()->with('validation', $validation);
+                                                                                                                //         }
+                                                                                                                //     }
+                                                                                                                // }
+                                                                                                                                                                            
+               
+
+            }
 

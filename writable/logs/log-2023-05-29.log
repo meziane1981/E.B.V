@@ -1,0 +1,353 @@
+INFO - 2023-05-29 10:47:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 10:47:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 10:47:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 13:11:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 13:12:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 13:12:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-29 13:12:24 --> Class "App\Controllers\ModelsUserModel" not found
+in APPPATH/Controllers/Home.php on line 136.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->register()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/basket2/public/index.php')
+INFO - 2023-05-29 13:14:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-29 13:35:09 --> mysqli_sql_exception: Unknown column 'users.deleted_at' in 'where clause' in /var/www/html/basket2/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /var/www/html/basket2/system/Database/MySQLi/Connection.php(295): mysqli->query()
+#1 /var/www/html/basket2/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/basket2/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/basket2/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/basket2/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/basket2/system/BaseModel.php(618): CodeIgniter\Model->doFindAll()
+#6 /var/www/html/basket2/app/Controllers/DashboardController.php(12): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/basket2/system/CodeIgniter.php(934): App\Controllers\DashboardController->user_dashboard()
+#8 /var/www/html/basket2/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/html/basket2/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/basket2/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /var/www/html/basket2/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+CRITICAL - 2023-05-29 13:35:09 --> Unknown column 'users.deleted_at' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll()
+ 7 APPPATH/Controllers/DashboardController.php(12): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DashboardController->user_dashboard()
+ 9 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/basket2/public/index.php')
+ERROR - 2023-05-29 13:36:23 --> mysqli_sql_exception: Unknown column 'users.deleted_at' in 'where clause' in /var/www/html/basket2/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /var/www/html/basket2/system/Database/MySQLi/Connection.php(295): mysqli->query()
+#1 /var/www/html/basket2/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/basket2/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/basket2/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/basket2/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/basket2/system/BaseModel.php(618): CodeIgniter\Model->doFindAll()
+#6 /var/www/html/basket2/app/Controllers/DashboardController.php(12): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/basket2/system/CodeIgniter.php(934): App\Controllers\DashboardController->user_dashboard()
+#8 /var/www/html/basket2/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/html/basket2/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/basket2/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /var/www/html/basket2/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+CRITICAL - 2023-05-29 13:36:23 --> Unknown column 'users.deleted_at' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll()
+ 7 APPPATH/Controllers/DashboardController.php(12): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DashboardController->user_dashboard()
+ 9 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/basket2/public/index.php')
+ERROR - 2023-05-29 13:40:23 --> mysqli_sql_exception: Unknown column 'users.deleted_at' in 'where clause' in /var/www/html/basket2/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /var/www/html/basket2/system/Database/MySQLi/Connection.php(295): mysqli->query()
+#1 /var/www/html/basket2/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/basket2/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/basket2/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/basket2/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/basket2/system/BaseModel.php(618): CodeIgniter\Model->doFindAll()
+#6 /var/www/html/basket2/app/Controllers/DashboardController.php(12): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/basket2/system/CodeIgniter.php(934): App\Controllers\DashboardController->user_dashboard()
+#8 /var/www/html/basket2/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/html/basket2/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/basket2/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /var/www/html/basket2/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+CRITICAL - 2023-05-29 13:40:23 --> Unknown column 'users.deleted_at' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll()
+ 7 APPPATH/Controllers/DashboardController.php(12): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DashboardController->user_dashboard()
+ 9 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/basket2/public/index.php')
+INFO - 2023-05-29 13:40:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-29 13:40:47 --> mysqli_sql_exception: Unknown column 'users.deleted_at' in 'where clause' in /var/www/html/basket2/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /var/www/html/basket2/system/Database/MySQLi/Connection.php(295): mysqli->query()
+#1 /var/www/html/basket2/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/basket2/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/basket2/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/basket2/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/basket2/system/BaseModel.php(618): CodeIgniter\Model->doFindAll()
+#6 /var/www/html/basket2/app/Controllers/DashboardController.php(12): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/basket2/system/CodeIgniter.php(934): App\Controllers\DashboardController->user_dashboard()
+#8 /var/www/html/basket2/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/html/basket2/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/basket2/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /var/www/html/basket2/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+CRITICAL - 2023-05-29 13:40:47 --> Unknown column 'users.deleted_at' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll()
+ 7 APPPATH/Controllers/DashboardController.php(12): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DashboardController->user_dashboard()
+ 9 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/basket2/public/index.php')
+ERROR - 2023-05-29 13:41:22 --> mysqli_sql_exception: Unknown column 'users.deleted_at' in 'where clause' in /var/www/html/basket2/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /var/www/html/basket2/system/Database/MySQLi/Connection.php(295): mysqli->query()
+#1 /var/www/html/basket2/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/basket2/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/basket2/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/basket2/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/basket2/system/BaseModel.php(618): CodeIgniter\Model->doFindAll()
+#6 /var/www/html/basket2/app/Controllers/DashboardController.php(12): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/basket2/system/CodeIgniter.php(934): App\Controllers\DashboardController->user_dashboard()
+#8 /var/www/html/basket2/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/html/basket2/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/basket2/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /var/www/html/basket2/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+CRITICAL - 2023-05-29 13:41:22 --> Unknown column 'users.deleted_at' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll()
+ 7 APPPATH/Controllers/DashboardController.php(12): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DashboardController->user_dashboard()
+ 9 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/basket2/public/index.php')
+ERROR - 2023-05-29 13:51:09 --> mysqli_sql_exception: Unknown column 'users.deleted_at' in 'where clause' in /var/www/html/basket2/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /var/www/html/basket2/system/Database/MySQLi/Connection.php(295): mysqli->query()
+#1 /var/www/html/basket2/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/basket2/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/basket2/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/basket2/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/basket2/system/BaseModel.php(618): CodeIgniter\Model->doFindAll()
+#6 /var/www/html/basket2/app/Controllers/DashboardController.php(12): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/basket2/system/CodeIgniter.php(934): App\Controllers\DashboardController->user_dashboard()
+#8 /var/www/html/basket2/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/html/basket2/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/basket2/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /var/www/html/basket2/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+CRITICAL - 2023-05-29 13:51:09 --> Unknown column 'users.deleted_at' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll()
+ 7 APPPATH/Controllers/DashboardController.php(12): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DashboardController->user_dashboard()
+ 9 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/basket2/public/index.php')
+ERROR - 2023-05-29 13:56:51 --> mysqli_sql_exception: Unknown column 'users.deleted_at' in 'where clause' in /var/www/html/basket2/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /var/www/html/basket2/system/Database/MySQLi/Connection.php(295): mysqli->query()
+#1 /var/www/html/basket2/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/basket2/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/basket2/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/basket2/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/basket2/system/BaseModel.php(618): CodeIgniter\Model->doFindAll()
+#6 /var/www/html/basket2/app/Controllers/DashboardController.php(12): CodeIgniter\BaseModel->findAll()
+#7 /var/www/html/basket2/system/CodeIgniter.php(934): App\Controllers\DashboardController->user_dashboard()
+#8 /var/www/html/basket2/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/html/basket2/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/basket2/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /var/www/html/basket2/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+CRITICAL - 2023-05-29 13:56:51 --> Unknown column 'users.deleted_at' in 'where clause'
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query()
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute()
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 5 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll()
+ 7 APPPATH/Controllers/DashboardController.php(12): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DashboardController->user_dashboard()
+ 9 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+10 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/basket2/public/index.php')
+CRITICAL - 2023-05-29 14:28:35 --> syntax error, unexpected end of file
+in APPPATH/Views/dashboard/user_dashboard.php on line 29.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/DashboardController.php(13): view()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DashboardController->user_dashboard()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/basket2/public/index.php')
+CRITICAL - 2023-05-29 14:31:09 --> syntax error, unexpected end of file
+in APPPATH/Views/dashboard/user_dashboard.php on line 30.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/DashboardController.php(13): view()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DashboardController->user_dashboard()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/basket2/public/index.php')
+CRITICAL - 2023-05-29 14:32:15 --> syntax error, unexpected end of file
+in APPPATH/Views/dashboard/user_dashboard.php on line 30.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/DashboardController.php(13): view()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DashboardController->user_dashboard()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/basket2/public/index.php')
+CRITICAL - 2023-05-29 14:32:43 --> syntax error, unexpected end of file
+in APPPATH/Views/dashboard/user_dashboard.php on line 27.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/DashboardController.php(13): view()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DashboardController->user_dashboard()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/basket2/public/index.php')
+CRITICAL - 2023-05-29 14:33:29 --> Undefined array key "usernamme"
+in APPPATH/Views/dashboard/user_dashboard.php on line 17.
+ 1 APPPATH/Views/dashboard/user_dashboard.php(17): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(213): include('/var/www/html/basket2/app/Views/dashboard/user_dashboard.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/DashboardController.php(13): view()
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DashboardController->user_dashboard()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/basket2/public/index.php')
+CRITICAL - 2023-05-29 14:35:27 --> syntax error, unexpected end of file
+in APPPATH/Views/dashboard/user_dashboard.php on line 27.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/DashboardController.php(13): view()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DashboardController->user_dashboard()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/basket2/public/index.php')
+INFO - 2023-05-29 14:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:02:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:03:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:05:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:05:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:10:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:11:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:11:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:11:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:22:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:23:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:23:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:23:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:23:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:23:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:28:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:29:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:29:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:32:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:32:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:32:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:32:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:33:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:33:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:33:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:35:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-29 15:35:55 --> "login" is not a validation rules group.
+in SYSTEMPATH/Validation/Validation.php on line 619.
+ 1 SYSTEMPATH/Validation/Validation.php(619): CodeIgniter\Validation\Exceptions\ValidationException::forGroupNotFound()
+ 2 SYSTEMPATH/Validation/Validation.php(118): CodeIgniter\Validation\Validation->loadRuleGroup()
+ 3 APPPATH/Controllers/Home.php(184): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->login()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/basket2/public/index.php')
+INFO - 2023-05-29 15:39:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:39:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:39:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:39:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:41:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:41:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:41:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-29 15:41:32 --> "login" is not a validation rules group.
+in SYSTEMPATH/Validation/Validation.php on line 619.
+ 1 SYSTEMPATH/Validation/Validation.php(619): CodeIgniter\Validation\Exceptions\ValidationException::forGroupNotFound()
+ 2 SYSTEMPATH/Validation/Validation.php(118): CodeIgniter\Validation\Validation->loadRuleGroup()
+ 3 APPPATH/Controllers/Home.php(183): CodeIgniter\Validation\Validation->run()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->login()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/basket2/public/index.php')
+INFO - 2023-05-29 15:45:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:45:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:45:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:45:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:47:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:47:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-29 15:47:53 --> syntax error, unexpected token "endif", expecting end of file
+in APPPATH/Views/login.php on line 14.
+ 1 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH/Common.php(1184): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/Home.php(154): view()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->login()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/html/basket2/public/index.php')
+INFO - 2023-05-29 15:48:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:50:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:50:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-29 15:50:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

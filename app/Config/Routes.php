@@ -33,8 +33,12 @@ $routes->get('/', 'Home::index');
 
 $routes->get('/register', 'Home::register');
 $routes->post('/register', 'Home::register');
-$routes->get('/login', 'Home::login');
 
+$routes->get('/login', 'Home::login');
+$routes->post('/login', 'Home::login');
+
+ 
+$routes->get('/user_dashboard', 'DashboardController::user_dashboard');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
