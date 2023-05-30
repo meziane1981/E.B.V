@@ -98,6 +98,8 @@
 namespace App\Controllers;
 use App\Model\UserModel;
 use App\Models\UserModel as ModelsUserModel;
+use CodeIgniter\Validation\Validation;
+use Config\Services;
 
 class Home extends BaseController
 {
@@ -150,27 +152,52 @@ class Home extends BaseController
     public function login()
     {
         $session = session();
-        if ($this->request->getMethod()=="get") {
-            return view('login');
-        }
-        else if ($this->request->getMethod()== "post"){
-            $validation = \Config\Services::validation();
-               // validation
-               if ($this->validate([
-                 
-                "email" => "required|valid_email",
-                "password" => "required"         
-               ]))
-               {
 
-               }
-               else
-               {
-                   return redirect()->back()->withInput()->with('validation', $validation);
-               }
+        if ($this->request->getMethod() == "get") {
+            return view('login');
+        } elseif ($this->request->getMethod() == "post") {
+            $validation = \Config\Services::validation();
+
+            // Validation
+            if ($validation->run($this->request->getPost(), 'login')) {
+                // Les règles de validation ont été respectées
+                // Effectuez ici les actions nécessaires pour l'authentification de l'utilisateur
+
+                $email = $this->request->getVar("email");
+                $password = $this->request->getVar("password");
+
+                $model= new ModelsUserModel();
+                $user = $model->where('email', $email)->first();
+
+                if ($user && password_verify($password, $user['password'])) {
+                    // L'utilisateur est authentifié avec succès
+                    // Vous pouvez stocker les informations de l'utilisateur dans la session si nécessaire
+                    $session->set('user_id', $user['id']);
+
+                    return redirect()->to('dashboard/user_dashboard'); // Remplacez 'dashboard' par l'URL de la page de tableau de bord après la connexion
+                } else {
+                    // Les informations de connexion sont incorrectes
+                    $validation->setError('password', 'Identifiants invalides.');
+
+                    return redirect()->back()->withInput()->with('validation', $validation);
+                }
+            } else {
+                // Les règles de validation n'ont pas été respectées
+                return redirect()->back()->withInput()->with('validation', $validation);
+            }
+        } else {
+            $validation = \Config\Services::validation();
+            echo view('login', ['validation' => $validation]);
         }
-        
     }
+    
+    
+    
+}
+    
+
+        
+    
                                                                                     //     public function login()
                                                                                     // {
                                                                                     //     $session = session();
@@ -241,5 +268,5 @@ class Home extends BaseController
                                                                                                                                                                             
                
 
-            }
+        
 

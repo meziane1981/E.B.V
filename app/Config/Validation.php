@@ -10,6 +10,10 @@ use CodeIgniter\Validation\StrictRules\Rules;
 
 class Validation extends BaseConfig
 {
+    public $login = [
+        'email' => 'required|valid_email',
+        'password' => 'required',
+    ];
     // --------------------------------------------------------------------
     // Setup
     // --------------------------------------------------------------------
