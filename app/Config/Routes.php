@@ -39,6 +39,7 @@ $routes->post('/login', 'Home::login');
 
  
 $routes->get('/user_dashboard', 'DashboardController::user_dashboard');
+$routes->post('/user_dashboard', 'DashboardController::user_dashboard');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

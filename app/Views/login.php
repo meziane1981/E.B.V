@@ -8,9 +8,9 @@
                 <div class="card-body">
                     <h2>Se Connecter</h2>
                     <?php $session = session() ?>
-                    <?php if (!is_null($session->getFlashdata('success_message'))): ?>
-                        <div class="alert alert-success">
-                            <?= $session->getFlashdata('success_message'); ?>
+                    <?php if (!is_null($session->getFlashdata('failed_message'))): ?>
+                        <div class="alert alert-danger">
+                            <?= $session->getFlashdata('failed_message'); ?>
                         </div>
                     <?php endif; ?>
 

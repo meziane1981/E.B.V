@@ -14,6 +14,7 @@ class Validation extends BaseConfig
         'email' => 'required|valid_email',
         'password' => 'required',
     ];
+    
     // --------------------------------------------------------------------
     // Setup
     // --------------------------------------------------------------------
