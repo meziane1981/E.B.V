@@ -171,25 +171,29 @@ class Home extends BaseController
             $record = $user = $model
             ->where('email', $email)
             ->first();
-            $session->session();
+            //$session->session();
              if (! is_null($record)){
                 // les information se trouve dans la base de données
                 
-                $$sess_data = [
-                    'name'  => $record['name'],
+                $sess_data = [
+                    'name'  => $record['username'],
                     'email'  => $record['email'],
                     'user_type'=> $record['user_type'],
+                    'loginned'=> 'loginned',
                     
                 ];
                 $session->set($sess_data);
                 if ($record['user_type'] == 'user') {
                     // aller au user page
+                    $url="user_dashboard";
 
                 } 
                elseif ($record['user_type'] == 'admin') {
                 // aller au admin page 
+                $url="admin_dashboard";
                 
                }
+               return redirect()->to(base_url($url));
             }
             if ($user && password_verify($password, $user['password'])) {
                 // L'utilisateur est authentifié avec succès

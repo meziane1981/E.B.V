@@ -8,8 +8,8 @@ class DashboardController extends BaseController
     public function user_dashboard()
 
     {
-        $model= new ModelsUserModel();
-        $users = $model->findall();
-        return view('dashboard/user_dashboard',['users'=>$users]);
+        // $model= new ModelsUserModel();
+        // $users = $model->findall();
+        return view('dashboard/user_dashboard');
     }
 }
