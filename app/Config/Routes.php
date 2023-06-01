@@ -39,6 +39,7 @@ $routes->post('/login', 'Home::login');
 
 $routes->get('/logout', 'Home::logout');
 
+
 $routes->get('/profile', 'Home::profile');
 
  

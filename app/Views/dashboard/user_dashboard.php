@@ -7,7 +7,8 @@
         <h1>Bienvenue dans le tableau de bord d'utilisateur</h1>
         </div>
      <div class="col-sm-2">
-        <a href="base_url('profile')" class="btn btn-dark">Changer de profile</a>
+        <a href="<?= base_url('profile')?>" class="btn btn-dark">Changer de profile</a>
+       
      </div>
     </div>
 </div>

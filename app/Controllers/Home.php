@@ -200,14 +200,17 @@ class Home extends BaseController
             return view('login', ['validation' => $validation]);
         }
     }
+                
     public function logout() 
-    {
-        $session=session();
-        session_unset();
-        session_destroy();
-        return redirect()->to(base_url());
-    }
-    
+                {
+                    $session=session();
+                    session_unset();
+                    session_destroy();
+                    return redirect()->to(base_url());
+                }
+                public function profile(){
+                    echo view("profile");
+                }
  }
 
 
