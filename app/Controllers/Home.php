@@ -151,74 +151,137 @@ class Home extends BaseController
 
 
     public function login()
-{
-    $session = session();
+    {
+        $session = session();
+        
+        if ($this->request->getMethod() == "get") {
+            echo view('login');
+        } elseif ($this->request->getMethod() == "post") {
+            $validation = \Config\Services::validation();
     
-    if ($this->request->getMethod() == "get") {
-        echo view('login');
-    } elseif ($this->request->getMethod() == "post") {
-        $validation = \Config\Services::validation();
-
-        // Validation
-        if ($validation->run($this->request->getPost(), 'login')) {
-            // Les règles de validation ont été respectées
-            // Effectuez ici les actions nécessaires pour l'authentification de l'utilisateur
-            
-            $email = $this->request->getVar("email");
-            $password = $this->request->getVar("password");
-
-            $model = new ModelsUserModel();
-            $record = $user = $model
-            ->where('email', $email)
-            ->first();
-            //$session->session();
-             if (! is_null($record)){
-                // les information se trouve dans la base de données
+            // Validation
+            if ($validation->run($this->request->getPost(), 'login')) {
+                // Les règles de validation ont été respectées
+                // Effectuez ici les actions nécessaires pour l'authentification de l'utilisateur
                 
-                $sess_data = [
-                    'name'  => $record['username'],
-                    'email'  => $record['email'],
-                    'user_type'=> $record['user_type'],
-                    'loginned'=> 'loginned',
-                    
-                ];
-                $session->set($sess_data);
-                if ($record['user_type'] == 'user') {
-                    // aller au user page
-                    $url="user_dashboard";
-
-                } 
-               elseif ($record['user_type'] == 'admin') {
-                // aller au admin page 
-                $url="admin_dashboard";
-                
-               }
-               return redirect()->to(base_url($url));
+                $email = $this->request->getVar("email");
+                $password = $this->request->getVar("password");
+    
+                $model = new ModelsUserModel();
+                $record = $model->where('email', $email)->first();
+    
+                if (!empty($record) && password_verify($password, $record['password'])) {
+                    // L'utilisateur est authentifié avec succès
+                    // Vous pouvez stocker les informations de l'utilisateur dans la session si nécessaire
+    
+                    $sess_data = [
+                        'name'     => $record['username'],
+                        'email'    => $record['email'],
+                        'user_type'=> $record['user_type'],
+                        'loginned' => true,
+                    ];
+    
+                    $session->set($sess_data);
+    
+                    if ($record['user_type'] == 'user') {
+                        // Redirection vers la page utilisateur
+                        return redirect()->to(base_url('user_dashboard'));
+                    } elseif ($record['user_type'] == 'admin') {
+                        // Redirection vers la page admin
+                        return redirect()->to(base_url('admin_dashboard'));
+                    }
+                } else {
+                    // Les informations de connexion sont incorrectes
+                    $validation->setError('password', 'Identifiants invalides.');
+                }
             }
-            if ($user && password_verify($password, $user['password'])) {
-                // L'utilisateur est authentifié avec succès
-                // Vous pouvez stocker les informations de l'utilisateur dans la session si nécessaire
-                
-                $session->set("failed_message", "l'enregistrement ne correspond pas, réessayez autre fois");
-                $session->markAsFlashdata("failed_message");
-
-
-                return redirect()->to('dashboard/user_dashboard');
-            } else {
-                // Les informations de connexion sont incorrectes
-                $validation->setError('password', 'Identifiants invalides.');
-
-                return view('login', ['validation' => $validation]);
-            }
-        } else {
-            // Les règles de validation n'ont pas été respectées
+    
+            // Les règles de validation n'ont pas été respectées ou les informations de connexion sont incorrectes
             return view('login', ['validation' => $validation]);
         }
     }
-}
-       
-}
- 
+    public function logout() 
+    {
+        $session=session();
+        session_unset();
+        session_destroy();
+        return redirect()->to(base_url());
+    }
+    
+ }
+
+
+
+
+
+                //     public function login()
+                // {
+                //     $session = session();
+                    
+                //     if ($this->request->getMethod() == "get") {
+                //         echo view('login');
+                //     } elseif ($this->request->getMethod() == "post") {
+                //         $validation = \Config\Services::validation();
+
+                //         // Validation
+                //         if ($validation->run($this->request->getPost(), 'login')) {
+                //             // Les règles de validation ont été respectées
+                //             // Effectuez ici les actions nécessaires pour l'authentification de l'utilisateur
+                            
+                //             $email = $this->request->getVar("email");
+                //             $password = $this->request->getVar("password");
+
+                //             $model = new ModelsUserModel();
+                //             $record = $user = $model
+                //             ->where('email', $email)
+                //             ->first();
+                //             //$session->session();
+                //              if (! is_null($record)){
+                //                 // les information se trouve dans la base de données
+                                
+                //                 $sess_data = [
+                //                     'name'  => $record['username'],
+                //                     'email'  => $record['email'],
+                //                     'user_type'=> $record['user_type'],
+                //                     'loginned'=> 'loginned',
+                                    
+                //                 ];
+                //                 $session->set($sess_data);
+                //                 if ($record['user_type'] == 'user') {
+                //                     // aller au user page
+                //                     $url="user_dashboard";
+
+                //                 } 
+                //                elseif ($record['user_type'] == 'admin') {
+                //                 // aller au admin page 
+                //                 $url="admin_dashboard";
+                                
+                //                }
+                //                return redirect()->to(base_url($url));
+                //             }
+                //             if ($user && password_verify($password, $user['password'])) {
+                //                 // L'utilisateur est authentifié avec succès
+                //                 // Vous pouvez stocker les informations de l'utilisateur dans la session si nécessaire
+                                
+                //                 $session->set("failed_message", "l'enregistrement ne correspond pas, réessayez autre fois");
+                //                 $session->markAsFlashdata("failed_message");
+
+
+                //                 return redirect()->to('dashboard/user_dashboard');
+                //             } else {
+                //                 // Les informations de connexion sont incorrectes
+                //                 $validation->setError('password', 'Identifiants invalides.');
+
+                //                 return view('login', ['validation' => $validation]);
+                //             }
+                //         } else {
+                //             // Les règles de validation n'ont pas été respectées
+                //             return view('login', ['validation' => $validation]);
+                //         }
+                //     }
+                // }
+                    
+                
 
 
   

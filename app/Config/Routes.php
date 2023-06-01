@@ -37,6 +37,10 @@ $routes->post('/register', 'Home::register');
 $routes->get('/login', 'Home::login');
 $routes->post('/login', 'Home::login');
 
+$routes->get('/logout', 'Home::logout');
+
+$routes->get('/profile', 'Home::profile');
+
  
 $routes->get('/user_dashboard', 'DashboardController::user_dashboard');
 $routes->get('/admin_dashboard', 'AdminDashboardController::index');
