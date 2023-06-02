@@ -98,6 +98,7 @@
 namespace App\Controllers;
 use App\Model\UserModel;
 use App\Models\UserModel as ModelsUserModel;
+use App\Models\UserDetailsModel;
 use CodeIgniter\Validation\Validation;
 use Config\Services;
 
@@ -175,6 +176,7 @@ class Home extends BaseController
                     // Vous pouvez stocker les informations de l'utilisateur dans la session si nécessaire
     
                     $sess_data = [
+                        'user_id'  => $record['id'],
                         'name'     => $record['username'],
                         'email'    => $record['email'],
                         'user_type'=> $record['user_type'],
@@ -209,7 +211,66 @@ class Home extends BaseController
                     return redirect()->to(base_url());
                 }
                 public function profile(){
-                    echo view("profile");
+
+                    if ($this->request->getMethod()=="get") {
+                        echo view("profile");
+                    }
+                    else if($this->request->getMethod()=="post"){
+                         
+                        $country=$this->request->getvar('country');
+                        $state=$this->request->getvar('state');
+                        $district=$this->request->getvar('district');
+                        $pincode=$this->request->getvar('pincode');
+                        $mobile=$this->request->getvar('mobile');
+                        $local_address=$this->request->getvar('local_address');
+                        $permanent_address=$this->request->getvar('permanent_address');
+
+                        $model = new UserDetailsModel();
+                        $session=session(); 
+                        $user_id=$session->user_id;
+                        $record=$model->where("user_id", $user_id)->first();
+                        $data=[
+                            'user_id'=>$user_id,
+                            'country'=>$country,
+                            'state'=>$state,
+                            'district'=>$district,
+                            'pincode'=>$pincode,
+                            'mobile'=>$mobile,
+                            'local_address'=>$local_address,
+                            'permanent_address'=>$permanent_address,
+                        ];
+
+                         
+                        if (!is_null($record)) {
+                            //modifacation
+                            $model->update($user_id, $data);
+                        }
+                        else {
+                            //insert
+                            $model->insert($data);
+
+                        }
+                    
+
+
+                        // if (! $this->validate([
+                        //     'country'=>'if_exist|max_length[120]',
+                        //     'state'=>'if_exist|max_length[120]',
+                        //     'district'=>'if_exist|max_length[120]',
+                        //     'pincode'=>'if_exist|integer|max_length[5]',
+                        //     'mobile'=>'if_exist|integer|exact_length[10]',
+                        //     'local_address'=>'if_exist|max_length[255]|',
+                        //     'permanent_address'=>'if_exist|max_length[255]|',
+                        // ])) {
+                        //    return redirect()->back()->withInput();
+                        // }
+                        // else {
+                        //     // modification 
+                        // }
+                        return redirect()->to(base_url("profile"));
+
+                    }
+                    
                 }
  }
 

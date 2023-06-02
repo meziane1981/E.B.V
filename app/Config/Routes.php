@@ -41,6 +41,7 @@ $routes->get('/logout', 'Home::logout');
 
 
 $routes->get('/profile', 'Home::profile');
+$routes->post('/profile', 'Home::profile');
 
  
 $routes->get('/user_dashboard', 'DashboardController::user_dashboard');
