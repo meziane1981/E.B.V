@@ -203,13 +203,16 @@ class Home extends BaseController
         }
     }
                 
-    public function logout() 
+                public function logout()
                 {
-                    $session=session();
-                    session_unset();
-                    session_destroy();
+                    $session = session();
+                    $session->remove(['user_id', 'name', 'email', 'user_type', 'loginned']);
+                    $session->destroy();
                     return redirect()->to(base_url());
                 }
+                
+                
+                
                 public function profile(){
 
                     if ($this->request->getMethod()=="get") {
@@ -243,7 +246,7 @@ class Home extends BaseController
                          
                         if (!is_null($record)) {
                             //modifacation
-                            $model->update($user_id, $data);
+                            $model->update($record['id'], $data);
                         }
                         else {
                             //insert
