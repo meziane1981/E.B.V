@@ -180,7 +180,7 @@ class Home extends BaseController
                         'name'     => $record['username'],
                         'email'    => $record['email'],
                         'user_type'=> $record['user_type'],
-                        'loginned' => true,
+                        'loginned' => 'loginned',
                     ];
     
                     $session->set($sess_data);
