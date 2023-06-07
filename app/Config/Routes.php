@@ -54,6 +54,10 @@ $routes->get('/user_dashboard', 'DashboardController::user_dashboard', ['filter'
 $routes->group('admin' , ['filter' => 'isAdmin'], static function ($routes) {
     $routes->get('admin_dashboard', 'AdminDashboardController::index');
     $routes->get('users', 'AdminDashboardController::users');
+
+    // Catégories de Produits
+    $routes->get('product_categories', 'ProductCategoriesController::create');
+
 });
 
 

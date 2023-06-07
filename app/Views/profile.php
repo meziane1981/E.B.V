@@ -45,11 +45,11 @@
 
                          <div class="row">
                             <div class="col">
-                                <label for="local_address">adresse locale</label>
+                                <label for="local_address">Adresse locale</label>
                                 <textarea class="form-control" name="local_address" id="local_address" ><?= ! is_null($record)?$record['local_address']:''?></textarea>
                             </div>
                             <div class="col">
-                                <label for="permanent_address">adresse permanente</label>
+                                <label for="permanent_address">Adresse de livraison</label>
                                 <textarea class="form-control" name="permanent_address" id="permanent_address"><?= ! is_null($record)?$record['permanent_address']:''?></textarea>
                                 
                             </div>

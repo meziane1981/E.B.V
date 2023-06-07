@@ -11,6 +11,7 @@
 
                     <div class="list-group">
                         <a href="<?= base_url('admin/users')?>" class="list-group-item">Users</a>
+                        <a href="<?= base_url('admin/product_categories')?>" class="list-group-item">Catégories de Produits</a>
                     </div>
                     
                 </div>
