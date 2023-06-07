@@ -43,16 +43,20 @@ $routes->get('/logout', 'Home::logout');
 $routes->get('/profile', 'Home::profile');
 $routes->post('/profile', 'Home::profile');
 
+
+
+
  
 $routes->get('/user_dashboard', 'DashboardController::user_dashboard', ['filter' => 'isLogin']);
 
 
 
-$routes->get('/admin_dashboard', 'AdminDashboardController::index', ['filter' => 'isAdmin']);
+$routes->group('admin' , ['filter' => 'isAdmin'], static function ($routes) {
+    $routes->get('admin_dashboard', 'AdminDashboardController::index');
+    $routes->get('users', 'AdminDashboardController::users');
+});
 
 
-
-$routes->get('/users', 'AdminDashboardController::users');
 
 
 

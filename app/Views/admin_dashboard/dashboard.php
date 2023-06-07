@@ -10,7 +10,7 @@
                 <div class="col-sm-2">
 
                     <div class="list-group">
-                        <a href="<?= base_url('users')?>" class="list-group-item">Users</a>
+                        <a href="<?= base_url('admin/users')?>" class="list-group-item">Users</a>
                     </div>
                     
                 </div>

@@ -190,7 +190,7 @@ class Home extends BaseController
                         return redirect()->to(base_url('user_dashboard'));
                     } elseif ($record['user_type'] == 'admin') {
                         // Redirection vers la page admin
-                        return redirect()->to(base_url('admin_dashboard'));
+                        return redirect()->to(base_url('admin/admin_dashboard'));
                     }
                 } else {
                     // Les informations de connexion sont incorrectes
