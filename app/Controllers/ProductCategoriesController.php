@@ -13,7 +13,13 @@ class ProductCategoriesController extends BaseController
 {
       
     public function create(){
-        return View('product_categories');
+        if ($this->request->getMethode()=="get") {
+            return View('product_categories/product_categories');
 
+        }
+        elseif ($this->request->) {
+            # code...
+        }
+        
     }
 }

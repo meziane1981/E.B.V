@@ -57,6 +57,7 @@ $routes->group('admin' , ['filter' => 'isAdmin'], static function ($routes) {
 
     // Catégories de Produits
     $routes->get('product_categories', 'ProductCategoriesController::create');
+    $routes->post('product_categories', 'ProductCategoriesController::create');
 
 });
 

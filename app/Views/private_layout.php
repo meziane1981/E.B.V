@@ -10,7 +10,27 @@
 </head>
 <body>
          <?=$this->include("navbar")  ?>
-    <?= $this->renderSection('content')?>
+         <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                <h1>Bienvenue dans le tableau de bord d'administrations</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                <div class="list-group">
+                        <a href="<?= base_url('admin/users')?>" class="list-group-item">Users</a>
+                        <a href="<?= base_url('admin/product_categories')?>" class="list-group-item">Catégories de Produits</a>
+                    </div>
+
+                </div>
+                
+                <div class="col-sm-9">
+                <?= $this->renderSection('content')?>
+                </div>
+            </div>
+         </div>
+  
     <script src= "<?= base_url('assets/js/main.js') ?>"></script>
 </body>
 </html>
